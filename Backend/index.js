@@ -5,13 +5,10 @@ const app = require('./app');
 const cors = require('cors');
 
 
-// const corsOptions ={
-//     origin:'http://localhost:5000', 
-//     credentials:true,            //access-control-allow-credentials:true
-//     optionSuccessStatus:200,
-//     Access-Control-Allow-Credentials: true
-// }
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:5000',
+  credentials: true
+}));
 
 //connect MongoDB
 connectwithDB();
